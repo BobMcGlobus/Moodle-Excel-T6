@@ -10,5 +10,12 @@
   <body>
     <h1>Welcome to MXchange!</h1>
     <p>This is just some useless test.</p>
+    <input type="text" id="path" value="">
+    <input type="button" id="importExcel" value="import Excel-file" onclick="checkFileReader()" />
+    <input type="button" id="openList" value="change List"  />
+    <hr />
+    <div id="divExcel"></div>
+    <script type="text/javascript" src="../importExcel.js" ></script>
+    <script>require('../changeTargetlist.js')</script>
   </body>
 </html>
