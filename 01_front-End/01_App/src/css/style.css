@@ -5,3 +5,36 @@ h1 {
 p {
     color: red;
 }
+
+.text {
+    font-family: Roboto Light; /*morgen checken wegen einbinden*/
+    font-size: 16pt;
+    color: #1D1D1B;
+}
+
+.subHeadline {
+    font-family: Roboto Light;
+    font-size: 26pt;
+    color: #1D1D1B;
+}
+
+.headline {
+    font-family: Roboto Regular;
+    font-size: 36pt;
+    color: #1D1D1B;
+}
+
+.CTARed {
+    border-color: #E20B1C;
+    background-color: none;
+    border-radius: 1rem; /*morgen checken*/
+    color: #1D1D1B;
+}
+
+.CTARed:hover {
+    border-color: #E20B1C;
+    background-color: #E20B1C;
+    border-radius: 1rem; /*morgen checken*/
+    color: white;
+    animation-duration: 0.5s;
+}
