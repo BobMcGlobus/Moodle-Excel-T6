@@ -1,5 +1,6 @@
+// import {createMenu} from changeMenu.js;
 const electron = require('electron');
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 
 function createWindow () {
   // Erstelle das Browser-Fenster.
@@ -16,8 +17,12 @@ function createWindow () {
 
   // Öffnen der DevTools.
   win.webContents.openDevTools()
-}
 
+  // Menu entfernen
+  // win.removeMenu();
+  Menu.setApplicationMenu(false)
+  win.loadURL('http://127.0.0.1:5500/01_App/src/html/index.html')
+}
 app.whenReady().then(createWindow);
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
