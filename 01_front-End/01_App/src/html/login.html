@@ -11,16 +11,14 @@
     <script src="../dist/jquery-3.5.0.min.js"></script>
   </head>
   <body>
-    <h1>Welcome to MXchange!</h1>
-    <p>This is just some useless test.</p>
+    <h1>Login</h1>
     <div id="wrapper">
-    <input type="file" id="input-excel" />
+        <input type="text" id="username" />
+        <input type="text" id="passwort" />
+        <input type="button" id="login" value="log in" onclick="checkUser()" />
     </div>
-    <input type="button" id="openList" value="change List"  />
     <hr />
-    <div><a href="login.html">Log in</a></div>
-    <script type="text/javascript" src="../importExcel.js" ></script>
-    <script>require('../changeTargetlist.js')</script>
+    <script type="text/javascript" src="../login.js" ></script>
 
 
   </body>
