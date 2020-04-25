@@ -22,6 +22,8 @@ function createWindow () {
   win.removeMenu();
 }
 
+require('electron-reload')(__dirname);
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Einige APIs können nur nach dem Auftreten dieses Events genutzt werden.
