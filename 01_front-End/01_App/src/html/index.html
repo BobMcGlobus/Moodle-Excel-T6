@@ -6,16 +6,22 @@
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
+    <script lang="javascript" src="../dist/FileSaver.min.js"></script>
+    <script src="../dist/jquery-3.5.0.min.js"></script>
   </head>
   <body>
     <h1>Welcome to MXchange!</h1>
     <p>This is just some useless test.</p>
-    <input type="text" id="path" value="">
-    <input type="button" id="importExcel" value="import Excel-file" onclick="checkFileReader()" />
+    <div id="wrapper">
+    <input type="file" id="input-excel" />
+    </div>
     <input type="button" id="openList" value="change List"  />
     <hr />
     <div id="divExcel"></div>
     <script type="text/javascript" src="../importExcel.js" ></script>
     <script>require('../changeTargetlist.js')</script>
+
+
   </body>
 </html>
