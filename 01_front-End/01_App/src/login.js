@@ -22,10 +22,10 @@ function checkUser(){
 
     var index = user.indexOf(usernameInput);
     console.log(index);
-
-    if (user[index].passwort != passwortInput) {
-        alert("you shall not pass.")
-    } else {
-        alert("the import may start");
+    
+    if (index >= 0) {
+        if (user[index].passwort != passwortInput) {
+            alert("Username und Passwort stimmen nicht überein.")
+        }
     }
 }
