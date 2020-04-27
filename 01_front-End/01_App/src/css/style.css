@@ -81,8 +81,31 @@ input {
     padding-left: 1rem;
 
 }
+.CTAinput{
+    border-color: var(--buttonred);
+    background-color: none;
+    border-radius: 1rem; /*morgen checken*/
+    color: var(--fontcolor);
+}
+
+.CTAinput:hover {
+    border-color: var(--buttonred);
+    background-color: var(--buttonred);
+    border-radius: 1rem; /*morgen checken*/
+    color: var(--buttonwhite);
+    animation-duration: 0.5s;
+}
+.CTAinput::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.CTAinput::before {
+    content: 'Bitte wählen sie eine Tabelle';
+}
 
 input:focus {
     border-color: var(--formdarkgray);
     color: var(--formdarkgray);
+}
+#startImport{
+    display: none;
 }
