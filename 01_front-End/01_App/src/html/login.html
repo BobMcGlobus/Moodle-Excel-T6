@@ -11,16 +11,18 @@
     <script src="../dist/jquery-3.5.0.min.js"></script>
   </head>
   <body>
-    <h1 class="headline">Welcome to MXchange!</h1>
+    <h1 class="headline">Login</h1>
     <div id="wrapper">
-    <input class="CTAinput" type="file" id="input-excel" />
+        <input type="text" id="username" />
+        <input type="text" id="passwort" />
+        <input class="CTARed" type="button" id="login" value="Log In" onclick="checkUser()" />
     </div>
-    <input class="CTARed" type="button" id="startImport" value="Import in Moodle" onclick="importData()" />
-    <input class="CTARed" type="button" id="openList" value="Liste ändern"  />
+
+    <input class="CTARed" type="button" id="import" value="Import in Moodle" onclick="importData()" />
     <hr />
-    <div><a href="login.html" >Log in</a></div>
-    <script type="text/javascript" src="../importExcel.js" ></script>
-    <script>require('../changeTargetlist.js')</script>
+    <script type="text/javascript" src="../login.js" ></script>
+    <script type="text/javascript" src="../import.js" ></script>
+
 
   </body>
 </html>
