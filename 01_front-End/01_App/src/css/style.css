@@ -13,6 +13,7 @@ p {
     --tablegray: #807C78;
     --formlightgray: #BFBAB3;
     --formdarkgray: #403E3C;
+    --buttongray: ;
 }
 
 .text {
@@ -41,10 +42,37 @@ p {
 }
 
 .CTARed:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
     border-color: var(--buttonred);
     background-color: var(--buttonred);
     border-radius: 1rem; /*morgen checken*/
     color: var(--buttonwhite);
+    animation-duration: 0.5s;
+}
+
+SVG {
+    width: 1rem; /*muss ggf. angepasst werden*/
+    margin: 0;
+}
+
+.CTAGray {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border-style: solid;
+    border-color: var(--formlightgray);
+    background-color: none;
+    border-radius: 1rem; /*morgen checken*/
+    color: var(--fontcolor);
+}
+
+.CTAGray:hover {
+    border-color: var(--formlightgray);
+    background-color: var(--formlightgray);
+    border-radius: 1rem; /*morgen checken*/
+    color: var(--fontcolor);
     animation-duration: 0.5s;
 }
 
