@@ -52,7 +52,7 @@ p {
     animation-duration: 0.5s;
 }
 
-SVG {
+img {
     width: 1rem; /*muss ggf. angepasst werden*/
     margin: 0;
 }
