@@ -17,7 +17,6 @@ p {
     --tablegray: #807C78;
     --formlightgray: #BFBAB3;
     --formdarkgray: #403E3C;
-    --buttongray: ;
 }
 
 .text {
@@ -51,6 +50,7 @@ p {
 }
 
 .CTARed:hover {
+    cursor: pointer;
     border-color: var(--buttonred);
     background-color: var(--buttonred);
     border-radius: 1rem; /*morgen checken*/
@@ -80,6 +80,7 @@ img {
 }
 
 .CTAGraySpecial:hover {
+    cursor: pointer;
     border-color: var(--formlightgray);
     background-color: var(--formlightgray);
     border-radius: 1rem; /*morgen checken*/
@@ -102,6 +103,7 @@ img {
 }
 
 .CTARedSpecial:hover {
+    cursor: pointer;
     border-color: var(--buttonred);
     background-color: var(--buttonred);
     border-radius: 1rem; /*morgen checken*/
