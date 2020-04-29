@@ -10,7 +10,7 @@
     <script lang="javascript" src="../dist/FileSaver.min.js"></script>
     <script src="../dist/jquery-3.5.0.min.js"></script>
 </head>
-<body>
+<body onload="stuff(); percent();">
 <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
     <img src="../img/back-arrow.svg" alt="back">
     <p class="text">Abbrechen</p>
@@ -18,9 +18,11 @@
 <div class="content-box" style="margin-top: 200px">
 <h1 class="headline" style="text-align: center">Daten werden exportiert... bitte warten...</h1>
     <a href="success.html"> <div class="single9"></div></a>
-<h2 class="subHeadline" style="text-align: center">30%</h2>
+<h2 class="subHeadline" id="percent" style="text-align: center"></h2>
 
-<p class="text" style="text-align: center"> LOOOOOOL</p>
+<p class="text" id="stuff" style="text-align: center"> </p>
 </div>
+<script src="../comments.js"></script>
+<script src="../percent.js"></script>
 </body>
 </html>
