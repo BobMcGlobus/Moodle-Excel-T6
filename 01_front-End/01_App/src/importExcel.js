@@ -9,6 +9,7 @@ $('#input-excel').change(function(e){   //jquery stuff (note that there is no ch
         var wb = XLSX.read(data,{type:'array'});
         var htmlstr = XLSX.write(wb,{sheet:"Blatt1", type:'binary',bookType:'html'});   //searches for a special sheet maybe make an input for it
         $('#wrapper')[0].innerHTML += htmlstr;                                          //place table in wrapper
+        console.log(wb);
         document.getElementById('startImport').style.display = "block";
     }
 });

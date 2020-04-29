@@ -11,21 +11,24 @@
     <script src="../dist/jquery-3.5.0.min.js"></script>
   </head>
   <body>
+  <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
+    <img src="../img/back-arrow.svg" alt="back">
+    <p class="text">Zurück</p>
+  </div></a>
 
-    <div class="single9"></div>
-    
+  <div class="content-box"  style="margin-top: 100px" >
     <h1 class="headline">Login</h1>
-    <div id="wrapper">
-        <input type="text" id="username" />
-        <input type="text" id="passwort" />
-        <input class="CTARed" type="button" id="login" value="Log In" onclick="checkUser()" />
-    </div>
 
-    <input class="CTARed" type="button" id="import" value="Import in Moodle" onclick="importData()" />
-    <hr />
+        <p class="text">Nutzername:</p>
+        <input type="text" id="username" />
+      <p class="text">Passwort:</p>
+        <input type="text" id="passwort" /><br>
+        <input class="CTARed" type="button" id="login" value="Anmelden" onclick="checkUser()" />
+
+
     <script type="text/javascript" src="../login.js" ></script>
     <script type="text/javascript" src="../import.js" ></script>
-
+  </div>
 
   </body>
 </html>

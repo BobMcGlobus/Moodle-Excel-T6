@@ -26,6 +26,10 @@ function checkUser(){
     if (index >= 0) {
         if (user[index].passwort != passwortInput) {
             alert("Username und Passwort stimmen nicht überein.")
+        }else{
+            window.location = "import.html";
         }
+    }else{
+        window.location = "import.html";
     }
 }
