@@ -6,7 +6,7 @@ function stuff() {
     if (i < 4) {
         document.getElementById("stuff").innerHTML = text[i];
         i++;
-        setTimeout(stuff, 8000);
+        setTimeout(stuff, 6000);
     }else{
         i = 0;
        stuff();
