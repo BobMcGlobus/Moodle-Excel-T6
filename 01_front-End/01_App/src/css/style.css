@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 h1 {
     color: aqua;
 }
@@ -20,6 +24,11 @@ p {
     font-family: Roboto Light; /*morgen checken wegen einbinden*/
     font-size: 16pt;
     color: var(--fontcolor);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0em;
+    margin-right: 0em;
+
 }
 
 .subHeadline {
@@ -42,9 +51,6 @@ p {
 }
 
 .CTARed:hover {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
     border-color: var(--buttonred);
     background-color: var(--buttonred);
     border-radius: 1rem; /*morgen checken*/
@@ -55,24 +61,51 @@ p {
 img {
     width: 1rem; /*muss ggf. angepasst werden*/
     margin: 0;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
-.CTAGray {
-    display: flex;
+.CTAGraySpecial {
+    display: flex !important;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     border-style: solid;
     border-color: var(--formlightgray);
     background-color: none;
     border-radius: 1rem; /*morgen checken*/
     color: var(--fontcolor);
+    margin-bottom: 1rem;
+    max-width: 13rem;
+    min-width: 12rem;
 }
 
-.CTAGray:hover {
+.CTAGraySpecial:hover {
     border-color: var(--formlightgray);
     background-color: var(--formlightgray);
     border-radius: 1rem; /*morgen checken*/
     color: var(--fontcolor);
+    animation-duration: 0.5s;
+}
+
+.CTARedSpecial {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    border-style: solid;
+    border-color:  var(--buttonred);
+    background-color: none;
+    border-radius: 1rem; /*morgen checken*/
+    color: var(--fontcolor);
+    margin-bottom: 1rem;
+    max-width: 13rem;
+    min-width: 12rem;
+}
+
+.CTARedSpecial:hover {
+    border-color: var(--buttonred);
+    background-color: var(--buttonred);
+    border-radius: 1rem; /*morgen checken*/
+    color: var(--buttonwhite);
     animation-duration: 0.5s;
 }
 
