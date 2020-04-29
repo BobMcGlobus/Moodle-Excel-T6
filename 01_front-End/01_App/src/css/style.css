@@ -159,9 +159,7 @@ input {
 .CTAinput::-webkit-file-upload-button {
     visibility: hidden;
 }
-.CTAinput::before {
-    content: 'Bitte wählen sie eine Tabelle';
-}
+
 
 input:focus {
     border-color: var(--formdarkgray);

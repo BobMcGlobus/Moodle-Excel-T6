@@ -12,12 +12,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 class="headline">Welcome to MXchange!</h1>
-    <div id="wrapper">
-    <input class="CTAinput" type="file" id="input-excel" />
+  <a id="openList"> <div class="CTAGraySpecial">
+    <img src="../img/option-wheel.svg" alt="option-wheel">
+    <p class="text">Einstellungen</p>
+  </div></a>
+    <h1 class="headline">Noten in Moodle exportieren:</h1>
+    <div class="import-dialog">
+      <h2>Bitte wählen Sie eine Tabelle aus mit der Sie die Daten exportieren möchten</h2>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum</p>
+      <input class="CTAinput" type="file" id="input-excel" />
     </div>
-    <input class="CTARed" type="button" id="startImport" value="Import in Moodle" onclick="importData()" />
-    <input class="CTARed" type="button" id="openList" value="Liste ändern"  />
+    <div id="wrapper">
+    </div>
+    <div class="import-box">
+      <h2>Möchten Sie die eingetragenen Daten auf Moodle hochladen?</h2>
+      <p>Wählen Sie den Dateiort der zu speichernden Daten auf Moodle aus!</p><br>
+      <input type="text" id="url" name="url" value="URL"><br>
+      <a href="import.html"> <div class="CTARedSpecial" onclick="importData()" id="startImport">
+        <img src="../img/download.svg" alt="download">
+        <p class="text">Importieren</p>
+      </div></a>
+    </div>
     <hr />
     <div><a href="login.html" >Log in</a></div>
     <script type="text/javascript" src="../importExcel.js" ></script>
@@ -33,10 +48,6 @@
       <p class="text">Abbrechen</p>
     </div></a>
 
-    <a href="#"> <div class="CTAGraySpecial">
-      <img src="../img/option-wheel.svg" alt="option-wheel">
-      <p class="text">Einstellungen</p>
-    </div></a>
 
     <a href="#"> <div class="CTARedSpecial">
       <img src="../img/download.svg" alt="download">
