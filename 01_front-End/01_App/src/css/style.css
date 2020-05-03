@@ -17,8 +17,12 @@ p {
     --tablegray: #807C78;
     --formlightgray: #BFBAB3;
     --formdarkgray: #403E3C;
+    --buttondark: #403E3C;
 }
 
+body{
+    background-color: var(--buttonwhite);
+}
 .text {
     font-family: Roboto Light; /*morgen checken wegen einbinden*/
     font-size: 16pt;
@@ -232,4 +236,16 @@ input:focus {
 #wrapper {
     width: 45%;
     float: left;
+}
+/*--Darkmode--*/
+@media (prefers-color-scheme: dark) {
+    .CTARedSpecial:hover {color: var(--buttondark);}
+    body{background-color: #1D1D1B;}
+    .text {color: white}
+    input{color: #1D1D1B}
+    .headline{color: white}
+    .subHeadline{color: white}
+    h1,h2,h3,h4,h5,h6{color: white}
+    .CTAinput{color: white}
+
 }
