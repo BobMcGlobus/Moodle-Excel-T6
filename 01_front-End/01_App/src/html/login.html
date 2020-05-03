@@ -11,6 +11,7 @@
     <script src="../dist/jquery-3.5.0.min.js"></script>
   </head>
   <body>
+  <!-- <body onload="copyURL()"> -->
   <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
     <img src="../img/back-arrow.svg" alt="back">
     <p class="text">Zurück</p>
@@ -21,13 +22,13 @@
 
         <p class="text">Nutzername:</p>
         <input type="text" id="username" />
-      <p class="text">Passwort:</p>
+        <p class="text">Passwort:</p>
         <input type="text" id="passwort" /><br>
         <input class="CTARed" type="button" id="login" value="Anmelden" onclick="checkUser()" />
 
-
-    <script type="text/javascript" src="../login.js" ></script>
-    <script type="text/javascript" src="../import.js" ></script>
+    <p id="urlCopied"></p>
+    <script type="module" src="../login.js" ></script>
+    <script type="text/javascript" src="../importToMoodle.js" ></script>
   </div>
 
   </body>

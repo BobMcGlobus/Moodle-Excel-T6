@@ -1,35 +1,16 @@
+// import {shell} from 'electron';
+// const {shell} = require('electron');
+
 function checkUser(){
-    var user = [
-        {
-            username: "user1",
-            passwort: "passwort1"
-        },
-        {
-            username: "user2",
-            passwort: "passwort2"
-        },
-        {
-            username: "user3",
-            passwort: "passwort3"
-        }
-    ];
-    
     var usernameInput = document.getElementById('username').value;
     var passwortInput = document.getElementById('passwort').value;
 
-    console.log(usernameInput);
-    console.log(passwortInput);
+    require(shell).openExternal("https://www.intern.mosbach.dhbw.de/");
 
-    var index = user.indexOf(usernameInput);
-    console.log(index);
+    var username = document.getElementById('shortUsername');
+    var passwort = document.getElementById('password');
+
+    username.innerHTML = usernameInput;
+    passwort.innerHTML = passwortInput;
     
-    if (index >= 0) {
-        if (user[index].passwort != passwortInput) {
-            alert("Username und Passwort stimmen nicht überein.")
-        }else{
-            window.location = "import.html";
-        }
-    }else{
-        window.location = "import.html";
-    }
 }
