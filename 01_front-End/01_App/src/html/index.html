@@ -28,7 +28,7 @@
     <div class="import-box">
       <h2>Möchten Sie die eingetragenen Daten auf Moodle hochladen?</h2>
       <p class="text">Wählen Sie den Dateiort der zu speichernden Daten auf Moodle aus!</p><br>
-      <input type="text" id="url" name="url" placeholder="URL"><br>
+      <input type="text" id="url" name="url" placeholder="URL" oninput="saveURL()"><br>
       <a href="login.html"> <div class="CTARedSpecial" onclick="importData()" id="startImport">
         <img src="../img/download.svg" alt="download">
         <p class="text">Importieren</p>
@@ -36,6 +36,8 @@
     </div>
     </div>
   <script type="text/javascript" src="../importExcel.js" ></script>
+  <script type="text/javascript" src="../importToMoodle.js" ></script>
+  <script type="text/javascript" src="../login.js" ></script>
   <script>require('../changeTargetlist.js')</script>
   </body>
 </html>
