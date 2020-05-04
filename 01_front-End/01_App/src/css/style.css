@@ -245,7 +245,7 @@ input:focus {
     input{color: #1D1D1B}
     .headline{color: white}
     .subHeadline{color: white}
-    h1,h2,h3,h4,h5,h6{color: white}
+    h1,h2,h3,h4,h5,h6,th,td,p{color: white}
     .CTAinput{color: white}
 
 }
