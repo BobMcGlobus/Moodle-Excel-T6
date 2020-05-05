@@ -17,6 +17,7 @@ function openWindow(usernameInput, passwortInput) {
 
     newWin.webContents.on('did-finish-load', function() {
         console.log("TESTITEST");
+        window.setTimeout(importUserData(usernameInput, passwortInput),100000)
         // importUserData(usernameInput, passwortInput);
     });
     
