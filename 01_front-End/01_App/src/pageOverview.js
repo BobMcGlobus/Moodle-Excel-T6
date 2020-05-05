@@ -13,14 +13,14 @@ function changeLink(url){
     window.location.href = url;
 }
 
-function openWindow(url) {
-    window.open(url, '_blank', 'nodeIntegration=no')
-}
+// function openWindow(url) {
+//     window.open(url, '_blank', 'nodeIntegration=no')
+// }
 
 function openWindow(url) {
     const remote = require('electron').remote;
     const BrowserWindow = remote.BrowserWindow;
 
     var window = new BrowserWindow({ width: 800, height: 600 });
-    window.open(url, '_blank', 'nodeIntegration=no')
+    window.location.assign(url);
   }

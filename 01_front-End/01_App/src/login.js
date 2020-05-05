@@ -1,32 +1,31 @@
-var url = "https://www.intern.mosbach.dhbw.de/";
-
 function checkUser(url){
     var usernameInput = document.getElementById('username').value;
     var passwortInput = document.getElementById('passwort').value;
 
-    // require(shell).openExternal("https://www.intern.mosbach.dhbw.de/");
+    openWindow();
+}
 
-    openWindow(url);
+function openWindow(usernameInput, passwortInput) {
+    var url = "https://www.intern.mosbach.dhbw.de/";
+    console.log(url);
+    const remote = require('electron').remote;
+    const BrowserWindow = remote.BrowserWindow;
+
+    var newWin = new BrowserWindow({ width: 1200, height: 800 });
+    newWin.webContents.openDevTools();
+    newWin.loadURL(url);
+
+    newWin.webContents.on('did-finish-load', function() {
+        console.log("TESTITEST");
+        // importUserData(usernameInput, passwortInput);
+    });
+    
+}
+function importUserData(usernameInput, passwortInput) {
 
     var username = document.getElementById('shortUsername');
     var passwort = document.getElementById('password');
 
     username.innerHTML = usernameInput;
     passwort.innerHTML = passwortInput;
-    
-}
-
-function changeLink(url){
-    window.location.href = url;
-}
-
-function openWindow() {
-    var url = "https://www.intern.mosbach.dhbw.de/";
-    console.log(url);
-    const remote = require('electron').remote;
-    const BrowserWindow = remote.BrowserWindow;
-
-    var window = new BrowserWindow({ width: 800, height: 600 });
-    // window.location.href = "https://www.intern.mosbach.dhbw.de/";
-    window.open(url, '_blank', 'nodeIntegration=no');
 }
