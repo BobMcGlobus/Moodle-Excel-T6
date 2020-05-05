@@ -6,6 +6,19 @@ getName();
 setGrade(grade);
 clickButtonNext();
 */
+make_xlsx_lib(XLSX);
+var wbu;
+var userlist = new Uint8Array('./config/targetlist.xlsx');
+wbu = XLSX.read(userlist,{type:'array'});
+console.log(wbu);
+
+
+
+
+
+
+
+
 
 function getName() {
     /* Aufbau Moodle
