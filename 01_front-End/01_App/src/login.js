@@ -8,22 +8,25 @@ function checkUser(url){
 function openWindow(usernameInput, passwortInput) {
     var url = "https://www.intern.mosbach.dhbw.de/";
     console.log(url);
-    const remote = require('electron').remote;
-    const BrowserWindow = remote.BrowserWindow;
+    window.location.href = url;
+    window.setTimeout(importUserData(usernameInput, passwortInput),100000);
 
-    var newWin = new BrowserWindow({ width: 1200, height: 800 });
-    newWin.webContents.openDevTools();
-    newWin.loadURL(url);
+    // const remote = require('electron').remote;
+    // const BrowserWindow = remote.BrowserWindow;
 
-    newWin.webContents.on('did-finish-load', function() {
-        console.log("TESTITEST");
-        window.setTimeout(importUserData(usernameInput, passwortInput),100000)
-        // importUserData(usernameInput, passwortInput);
-    });
+    // var newWin = new BrowserWindow({ width: 1200, height: 800 });
+    // newWin.webContents.openDevTools();
+    // newWin.loadURL(url);
+
+    // newWin.webContents.on('did-finish-load', function() {
+    //     console.log("TESTITEST");
+    //     window.setTimeout(importUserData(usernameInput, passwortInput),100000)
+    //     // importUserData(usernameInput, passwortInput);
+    // });
     
 }
-function importUserData(usernameInput, passwortInput) {
 
+function importUserData(usernameInput, passwortInput) {
     var username = document.getElementById('shortUsername');
     var passwort = document.getElementById('password');
 

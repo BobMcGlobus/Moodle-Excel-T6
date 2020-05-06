@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Moodle-Excel-Tool</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
+    <script lang="javascript" src="../dist/FileSaver.min.js"></script>
+    <script src="../dist/jquery-3.5.0.min.js"></script>
+  </head>
+  <body>
+  <!-- <body onload="copyURL()"> -->
+  <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
+    <img src="../img/back-arrow.svg" alt="back">
+    <p class="text">Zurück</p>
+  </div></a>
+
+  <div class="content-box"  style="margin-top: 100px" >
+    <h1 class="headline">Login</h1>
+
+        <p class="text">Nutzername:</p>
+        <input type="text" id="username" />
+        <p class="text">Passwort:</p>
+        <input type="text" id="passwort" /><br>
+        <a href="bewertungsueberblick.html"> <div class="CTARed" onclick="checkUser()" id="login">
+          <p class="text">Anmelden</p>
+        </div></a>
+    <p id="urlCopied"></p>
+    <script type="text/javascript" src="../login.js" ></script>
+    <script type="text/javascript" src="../importToMoodle.js" ></script>
+    <script type="text/javascript" src="../pageUser.js" ></script>
+  </div>
+
+
+  </body>
+</html>
