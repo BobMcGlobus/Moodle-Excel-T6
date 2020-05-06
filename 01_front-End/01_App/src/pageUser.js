@@ -45,9 +45,9 @@ function searchName(name, surname) {
     var string = [{"Vorname":"Jonas","Name":"Althoff","Note":80},{"Vorname":"Christian","Name":"Dänzer","Note":55},{"Vorname":"Pascal","Name":"Feinauer","Note":70},{"Vorname":"Katharina","Name":"Schmitt","Note":95},{"Vorname":"Marco","Name":"Scotellaro","Note":40}];
 
     var obj = string;
-    var obj = jsonString;
-    var searchingVorname = 'Christian';
-    var searchingName = 'Dänzer';
+    // var obj = jsonString;
+    var searchingVorname = name;
+    var searchingName = surname;
     
     console.log(obj.length);
     for (var i = 0; i < obj.length; i++){
