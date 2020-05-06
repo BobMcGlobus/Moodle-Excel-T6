@@ -33,3 +33,12 @@ a {
 }
 
 /*HTML Bewertungsüberblick Sprint 2*/
+.breadcrumb {
+    margin-top: 10rem;
+    margin-left: 10rem;
+    color: #8c0011;
+}
+
+.h2 {
+    margin-left: 10rem;
+}
