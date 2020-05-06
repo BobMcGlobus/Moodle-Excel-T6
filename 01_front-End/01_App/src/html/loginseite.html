@@ -6,6 +6,8 @@
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <!--die Domäneauswahl hier gemacht-->
+    <link rel="stylesheet" type="text/css" href="../css/style2.css"/>
     <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
     <script lang="javascript" src="../dist/FileSaver.min.js"></script>
     <script src="../dist/jquery-3.5.0.min.js"></script>
@@ -21,11 +23,21 @@
     <h1 class="headline">Login</h1>
 
         <p class="text">Nutzername:</p>
-        <input type="text" id="username" />
+        <input type="text" id="shortUsername" name="shortUsername"/>
         <p class="text">Passwort:</p>
-        <input type="text" id="passwort" /><br>
-        <a href="bewertungsueberblick.html"> <div class="CTARed" onclick="checkUser()" id="login">
-          <p class="text">Anmelden</p>
+        <input type="password" id="password" name="__authentication[Neos][Flow][Security][Authentication][Token][UsernamePassword][password]"/><br>
+        <!--ich pack die Domäneauswahl einfach mal mit rein-->
+        <div id="domain-div" class="hidden" style="display: block;">
+          <label>Domäne</label>
+          <br>
+          <input type="radio" name="domain" id="mos-lh" value="@lehre.mosbach.dhbw.de" checked="checked">
+          <label for="mos-lh" class="checkbox">lehre.mosbach.dhbw.de</label>
+          <br>
+          <input type="radio" name="domain" id="mos-int" value="@intern.mosbach.dhbw.de">
+          <label for="mos-int" class="checkbox">intern.mosbach.dhbw.de</label>
+        </div>
+        <a href="bewertungsueberblick.html"> <div class="CTARed" onclick="checkUser()" id="login" value="Login">
+          <p class="text" style="border-style: solid; width: 150px; text-align: center; ">Anmelden</p>
         </div></a>
     <p id="urlCopied"></p>
     <script type="text/javascript" src="../login.js" ></script>
