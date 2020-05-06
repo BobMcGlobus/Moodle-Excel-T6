@@ -46,8 +46,8 @@ function searchName(name, surname) {
 
     var obj = string;
     // var obj = jsonString;
-    var searchingVorname = name;
-    var searchingName = surname;
+    var searchingVorname = name.trim();
+    var searchingName = surname.trim();
     
     console.log(obj.length);
     for (var i = 0; i < obj.length; i++){
