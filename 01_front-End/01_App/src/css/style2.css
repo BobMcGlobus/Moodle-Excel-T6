@@ -1,0 +1,35 @@
+*{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color:#8c0011;
+}
+
+/*HTML Namensseite Sprint 2*/
+#yui_3_17_2_1_1588755900393_53 {
+    text-align: center;
+    font-size: 20pt;
+}
+
+#yui_3_17_2_1_1588755900393_89 {
+    margin-top: 20rem;
+    font-size: 15pt;
+    margin-left: 5rem;
+}
+
+.fcontainer {
+    margin-top: 5rem;
+    margin-left: 5rem;
+
+}
+
+.btn {
+    bottom: 0;
+    left: 0em;
+    margin-left: 25rem;
+    margin-top: 20rem;
+}
+
+/*HTML Bewertungsüberblick Sprint 2*/
