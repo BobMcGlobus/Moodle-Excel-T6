@@ -6,7 +6,11 @@
     <title>Bewertungsueberblick</title>
     <link rel="stylesheet" type="text/css" href="../css/style2.css"/>
 </head>
-<body>
+<body onclick="clickButtonGrading();">  
+    <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
+        <img src="../img/back-arrow.svg" alt="back">
+        <p class="text">Zurück</p>
+    </div></a>
 
     <!--die is fix und nicht copy-pastet-->
     <p class="breadcrumb">
@@ -21,12 +25,16 @@
     </div>
     
     <div class="submissionlinks" style="margin-top: 15rem; margin-left: 20rem;">
-        <a style="color:black; border-style: solid; border-color: lightgrey; background-color: lightgrey; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem;" href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grading" class="btn btn-secondary">
+        <a style="color:black; border-style: solid; border-color: lightgrey; background-color: lightgrey; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem;" class="btn btn-secondary"> <!--href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grading"-->
             Alle Abgaben anzeigen
         </a>
-        <a style="color:black; border-style: solid; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem; margin-left: 1rem;" href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grader" class="btn btn-primary">
+        <a style="color:black; border-style: solid; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem; margin-left: 1rem;" class="btn btn-primary" onclick="window.location.href='namensseite.html'"> <!--href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grader" -->
             Bewertung
         </a>
     </div>
+
+    <script type="text/javascript" src="../login.js" ></script>
+    <script type="text/javascript" src="../pageOverview.js" ></script>
+    <script type="text/javascript" src="../pageUser.js" ></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 function importData () {
-    alert("Der Import wurde gestartet.");
+    // alert("Der Import wurde gestartet.");
 }
 
 function saveURL () {

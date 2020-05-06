@@ -6,18 +6,12 @@ getName();
 setGrade(grade);
 clickButtonNext();
 */
+
 make_xlsx_lib(XLSX);
 var wbu;
 var userlist = new Uint8Array('./config/targetlist.xlsx');
 wbu = XLSX.read(userlist,{type:'array'});
 console.log(wbu);
-
-
-
-
-
-
-
 
 
 function getName() {
@@ -29,9 +23,9 @@ function getName() {
     </div>
     */
 
-    // var nameTag = document.querySelector("div h4 a");
-    // var wholeString = nameTag.innerHTML;
-    var wholeString = "ON19 Jonas Althoff";
+    var nameTag = document.querySelector("div h4 a");
+    var wholeString = nameTag.innerHTML;
+    // var wholeString = "ON19 Jonas Althoff";
     var regex = /^(.{4}\s)([a-zA-ZäöüßÄÖÜèéÈÉ]*)(\s)([a-zA-ZäöüßÄÖÜèéÈÉ]*)/;
     var name = wholeString.replace(regex, "$2")
     var surname = wholeString.replace(regex, "$4")
@@ -47,12 +41,12 @@ function searchName(name, surname) {
      var columnC;
 
      for (i = 2; i <= wb.SheetNames[0].length; i++) {
-          // this is working with a table with name in mnr in column a, column c and surname in colum b
+          // this is working with a table with name in column a, surname in column b and grade in column c
           columnA = 'A' + i;
           columnB = 'B' + i;
           columnC = 'C' + i;
 
-          var nameTemp = wb.Sheets[ssheet][columnC].v;
+          var nameTemp = wb.Sheets[ssheet][columnA].v;
           var surnameTemp = wb.Sheets[ssheet][columnB].v;
 
           // console.log(name);
@@ -62,7 +56,7 @@ function searchName(name, surname) {
           if (name == nameTemp && surname == surnameTemp) { 
                console.log("found ya");
                //get grade
-               grade = wb.Sheets[ssheet][columnA].v;
+               grade = wb.Sheets[ssheet][columnC].v;
                setGrade(grade);
                break;
           }
@@ -74,8 +68,10 @@ function setGrade(grade) {
     var inputGrade = document.getElementById('id_grade');
 //     inputGrade.value = grade;
     inputGrade.innerHTML = grade;
+    clickButtonNext();
 }
 
 function clickButtonNext() {
+    alert("Nachdem der passende Name gefunden und die Note eingetragen wurde, wird der Button 'Speichern und nächste anzeigen' geklickt.");
     buttonNext.click();
 }
