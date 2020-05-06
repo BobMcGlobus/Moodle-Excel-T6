@@ -6,7 +6,8 @@ function clickButtonGrading() {
     // require(shell).openExternal(url);
     alert("Button 'Bewertung' wird geklickt.");
     var buttonGrading = document.querySelector("div.submissionlinks a.btn btn-primary");
-    buttonGrading.click();
+    // buttonGrading.click();
+    window.location.href='namensseite.html';
 }
 
 function openWindow() {

@@ -7,6 +7,8 @@ function loginUser() {
     passwortInput = document.getElementById('passwort').value;
     localStorage.setItem("passwortInputKey", passwortInput);
     window.location.href = "loginseite.html";
+    url = localStorage.getItem("urlKey");
+    console.log(url);
     return this.usernameInput, this.passwortInput;
 }
 

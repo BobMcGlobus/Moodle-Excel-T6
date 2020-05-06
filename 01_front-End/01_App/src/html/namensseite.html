@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>namepage</title>
     <link rel="stylesheet" type="text/css" href="../css/style2.css"/>
+    <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
+    <script lang="javascript" src="../dist/FileSaver.min.js"></script>
 </head>
-<body>
+<body onclick="getName()">
     <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
         <img src="../img/back-arrow.svg" alt="back">
         <p class="text">Zurück</p>
     </div></a>
     <div data-region="grading-navigation" class="col-md-4" data-assignment="4754" data-groupid="0" data-userid="30302" style>
         <h4 id="yui_3_17_2_1_1588755900393_53">
-            <a href="https://moodle.mosbach.dhbw.de/user/view.php?id=30302&course=10758">
-                ON19 Jonas Althoff
+            <a href="https://moodle.mosbach.dhbw.de/user/view.php?id=30302&course=10758"> ON19 Jonas Althoff
             </a>
         </h4>
     </div>
@@ -36,6 +37,7 @@
         Speichern und nächste anzeigen
     </button>
 
+    <script type="text/javascript" src="../importToMoodle.js" ></script>
     <script type="text/javascript" src="../login.js" ></script>
     <script type="text/javascript" src="../pageOverview.js" ></script>
     <script type="text/javascript" src="../pageUser.js" ></script>

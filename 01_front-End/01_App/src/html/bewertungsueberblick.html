@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bewertungsueberblick</title>
     <link rel="stylesheet" type="text/css" href="../css/style2.css"/>
+    <script lang="javascript" src="../dist/xlsx.full.min.js"></script>
+    <script lang="javascript" src="../dist/FileSaver.min.js"></script>
 </head>
-<body onclick="clickButtonGrading();">  
+<body onclick="clickButtonGrading()">  
     <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
         <img src="../img/back-arrow.svg" alt="back">
         <p class="text">Zurück</p>
@@ -28,13 +30,14 @@
         <a style="color:black; border-style: solid; border-color: lightgrey; background-color: lightgrey; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem;" class="btn btn-secondary"> <!--href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grading"-->
             Alle Abgaben anzeigen
         </a>
-        <a style="color:black; border-style: solid; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem; margin-left: 1rem;" class="btn btn-primary" onclick="window.location.href='namensseite.html'"> <!--href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grader" -->
+        <a style="color:black; border-style: solid; padding: 0.75rem; border-width: 0.1rem; border-radius: 0.4rem; margin-left: 1rem;" class="btn btn-primary" "> <!--href="https://moodle.mosbach.dhbw.de/mod/assign/view.php?id=132386&action=grader" onclick="window.location.href='namensseite.html'-->
             Bewertung
         </a>
     </div>
 
+    <script type="text/javascript" src="../importToMoodle.js" ></script>
     <script type="text/javascript" src="../login.js" ></script>
-    <script type="text/javascript" src="../pageOverview.js" ></script>
     <script type="text/javascript" src="../pageUser.js" ></script>
+    <script type="text/javascript" src="../pageOverview.js" ></script>
 </body>
 </html>
