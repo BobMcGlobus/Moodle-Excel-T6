@@ -25,7 +25,7 @@ function searchNameInUserlist(){
 function jsonToArray() {
 
     json_data = localStorage.getItem("jsonKey");
-    toString();
+    // toString();
     console.log(json_data);
 }
 
@@ -45,9 +45,18 @@ function searchName(name, surname) {
     var string = [{"Vorname":"Jonas","Name":"Althoff","Note":80},{"Vorname":"Christian","Name":"Dänzer","Note":55},{"Vorname":"Pascal","Name":"Feinauer","Note":70},{"Vorname":"Katharina","Name":"Schmitt","Note":95},{"Vorname":"Marco","Name":"Scotellaro","Note":40}];
 
     var obj = string;
-    // var obj = jsonString;
-    var searchingVorname = name.trim();
-    var searchingName = surname.trim();
+    // var obj = json_data;
+    var searchingVorname;
+    var searchingName;
+
+    fetch(obj)
+    .then(response =>{
+        return response.json();
+    })
+    .then(data =>{
+        searchingVorname = data.name.trim();
+        searchingName = data.surname.trim(); 
+    })
     
     console.log(obj.length);
     for (var i = 0; i < obj.length; i++){
