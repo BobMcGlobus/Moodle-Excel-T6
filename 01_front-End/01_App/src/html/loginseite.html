@@ -12,7 +12,7 @@
     <script lang="javascript" src="../dist/FileSaver.min.js"></script>
     <script src="../dist/jquery-3.5.0.min.js"></script>
   </head>
-  <body>
+  <body onload="checkUser()">
   <!-- <body onload="copyURL()"> -->
   <a href="index.html"> <div class="CTAGraySpecial" style="position: absolute; top: 15px; left: 10px;">
     <img src="../img/back-arrow.svg" alt="back">
@@ -36,12 +36,13 @@
           <input type="radio" name="domain" id="mos-int" value="@intern.mosbach.dhbw.de">
           <label for="mos-int" class="checkbox">intern.mosbach.dhbw.de</label>
         </div>
-        <a href="bewertungsueberblick.html"> <div class="CTARed" onclick="checkUser()" id="login" value="Login">
+        <a > <div class="CTARed" onclick="checkUser()" id="login" value="Login"> <!--href="bewertungsueberblick.html"-->
           <p class="text" style="border-style: solid; width: 150px; text-align: center; ">Anmelden</p>
         </div></a>
     <p id="urlCopied"></p>
-    <script type="text/javascript" src="../login.js" ></script>
+    <script type="text/javascript" src="../importExcel.js" ></script>
     <script type="text/javascript" src="../importToMoodle.js" ></script>
+    <script type="text/javascript" src="../login.js" ></script>
     <script type="text/javascript" src="../pageUser.js" ></script>
   </div>
 
