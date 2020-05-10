@@ -3,18 +3,20 @@ var passwortInput;
 
 function loginUser() {
     usernameInput = document.getElementById('username').value;
-    localStorage.setItem("usernameInputKey", usernameInput);
+    sessionStorage.setItem("usernameInputKey", usernameInput);
     passwortInput = document.getElementById('passwort').value;
-    localStorage.setItem("passwortInputKey", passwortInput);
+    sessionStorage.setItem("passwortInputKey", passwortInput);
     window.location.href = "loginseite.html";
-    url = localStorage.getItem("urlKey");
+    url = sessionStorage.getItem("urlKey");
+    sessionStorage.removeItem("urlKey");
     console.log(url);
+    // openWindow();
     return this.usernameInput, this.passwortInput;
 }
 
 function checkUser(){
-    usernameInput = localStorage.getItem("usernameInputKey");
-    passwortInput = localStorage.getItem("passwortInputKey");
+    usernameInput = sessionStorage.getItem("usernameInputKey");
+    passwortInput = sessionStorage.getItem("passwortInputKey");
     console.log(usernameInput);
     console.log(passwortInput);
     importUserData(usernameInput, passwortInput);
@@ -35,6 +37,17 @@ function importUserData(usernameInput, passwortInput) {
     passwort.value = passwortInput;
 }
 
+//open new browser window (new step)
+// function openWindow() {
+//     var url = localStorage.getItem("urlKey");
+//     const remote = require('electron').remote;
+//     const BrowserWindow = remote.BrowserWindow;
+
+//     var newWin = new BrowserWindow({ width: 1200, height: 800 });
+//     newWin.webContents.openDevTools();
+//     newWin.loadURL(url);
+//     newWin.webContents.executeJavaScript(`checkUser();`);
+// }
 
 
 // function openWindow(usernameInput, passwortInput) {
