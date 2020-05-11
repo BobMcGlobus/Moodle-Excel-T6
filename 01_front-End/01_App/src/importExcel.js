@@ -14,7 +14,7 @@ $('#input-excel').change(function(e){   //jquery stuff (note that there is no ch
         document.getElementById('startImport').style.display = "block";
 
         //save in local storage to access later from different html file
-        wb = localStorage.setItem("wbKey", JSON.stringify(wb));
+        wb = sessionStorage.setItem("wbKey", JSON.stringify(wb));
 
         // var ab = localStorage.getItem("wbKey");
         // console.log("ab.SheetNames[0].length: " + ab.SheetNames[0].length);
@@ -43,9 +43,9 @@ function makeString() {
             workbook.SheetNames.forEach(sheet => {
                 let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
                 jsonObject = JSON.stringify(rowObject);
-                document.getElementById("jsonData").innerHTML = jsonObject;
-                localStorage.setItem("jsonKey", jsonObject);
+                sessionStorage.setItem("jsonKey", jsonObject);
                 console.log(jsonObject);
+                console.log(jsonObject.length);
             });
         };
         fileReader.readAsBinaryString(selectedFile);

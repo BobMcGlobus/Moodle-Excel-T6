@@ -1,6 +1,7 @@
-* {
+* { 
+    font-family: 'Roboto';
     font-weight: 300;
-    font-size: 16pt;
+    /* font-size: 16pt; */
 }
 
 a {
